@@ -1,0 +1,37 @@
+name: korean-name-generator-mcp
+version: 1.0.0
+description: 키워드 기반 한국 이름 생성 MCP 서버
+
+# 서버 설정
+server:
+  name: KoreanNameGenerator
+  version: 1.0.0
+  description: 키워드 기반으로 재밌는 한국 이름을 생성하는 MCP 서버
+  
+# 런타임 설정
+runtime:
+  python_version: "3.11"
+  entry_point: main.py
+  
+# 의존성
+dependencies:
+  - fastmcp>=0.1.0
+  - pydantic>=2.0.0
+  - typing-extensions>=4.0.0
+
+# 환경 변수
+environment:
+  LOG_LEVEL: INFO
+  MCP_SERVER_NAME: KoreanNameGenerator
+
+# 배포 설정
+deploy:
+  region: us-east-1
+  memory: 512MB
+  timeout: 30s
+  
+# 헬스체크
+health_check:
+  enabled: true
+  path: /health
+  interval: 30s
