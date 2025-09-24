@@ -25,3 +25,4 @@ HEALTHCHECK --interval=30s --timeout=10s --start-period=5s --retries=3 \
 
 # 애플리케이션 실행
 CMD ["python", "main.py"]
+

@@ -30,3 +30,4 @@ class Config:
     # 기본 성별 옵션
     DEFAULT_GENDER: str = "any"
     AVAILABLE_GENDERS: list = ["male", "female", "any"]
+
